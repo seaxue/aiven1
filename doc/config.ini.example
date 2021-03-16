@@ -1,0 +1,15 @@
+[db]
+host=foo
+database=bar
+port=5432
+user=me
+password=etc
+sslmode=require
+
+[kafka]
+bootstrap_server=foo.example.com:13112
+topic_name=prober
+group_id=group1
+ssl_cafile=certs/kafka-ca.pem
+ssl_keyfile=certs/kafka-key.pem
+ssl_certfile=certs/kafka-cert.pem

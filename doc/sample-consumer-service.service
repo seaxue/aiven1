@@ -1,0 +1,16 @@
+[Unit]
+Description=Site Prober (DB Inserter)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /var/lib/site-prober/site-prober.py -c
+WorkingDirectory=/var/lib/site-prober
+Restart=always
+RestartSec=3
+User=prober
+Group=prober
+
+[Install]
+WantedBy=multi-user.target
