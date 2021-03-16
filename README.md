@@ -33,6 +33,14 @@ probe_sites # Inject urls one at a time. Take note of the site ID.
 probe_regexes # Inject regexes as regex_str, and ensure that the associated_site_id matches the configured id in probe_sites
 ```
 
+Like this:
+```
+insert into probe_sites(url) values('https://slashdot.org')
+insert into probe_sites(url) values('https://bbc.co.uk')
+insert into probe_regexes(associated_site_id, regex_str) values(1, '.+alien.+')
+insert into probe_regexes(associated_site_id, regex_str) values(2, '.+moon.+')
+```
+
 ToDo: Add a small script for injecting configuration automatically.
 
 # Directory Structure
